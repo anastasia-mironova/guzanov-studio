@@ -124,7 +124,7 @@ body {
 }
 
 .content__header {
-  width: 670px;
+  max-width: 50%;
   height: auto;
   white-space: normal;
   font-weight: 600;
@@ -135,7 +135,7 @@ body {
 
 .content__header-description {
   font-size: 4.5vh;
-  width: 640px;
+  width: 50%;
   white-space: normal;
   margin-bottom: 70px;
 }
@@ -353,7 +353,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 385px;
+  width: 40%;
 }
 
 .faq-section__item-header {
@@ -396,7 +396,7 @@ body {
 }
 
 .feedback-section__header {
-  width: 710px;
+  width: 60%;
   height: auto;
   font-weight: 600;
   font-size: 8vh;
@@ -602,6 +602,10 @@ body {
     margin-left: 0;
     margin: 0 auto;
   }
+  .contact-section__header {
+    font-size: 6vh;
+    text-align: left;
+  }
   .order-section__item-wrapper {
     flex-wrap: wrap;
   }
@@ -635,5 +639,23 @@ body {
   .contact-section-wrapper {
     margin-left: 30px;
     margin-bottom: 70px;
+  }
+  .content__header {
+    text-align: center;
+  }
+  .faq-section__questions-wrapper {
+    width: 90%;
+  }
+  .faq-section__item-wrapper {
+    width: 90%;
+  }
+  .email__value, .phone-number__value {
+    font-size: 0.7em;
+  }
+  .address {
+    width: 100%
+  }
+  .phone-number {
+    white-space: nowrap;
   }
 }
