@@ -47,6 +47,7 @@ body {
   left: 0;
   width: 100%;
   padding: 30px;
+  z-index: 20;
 }
 
 .preview__header {
@@ -591,7 +592,7 @@ body {
     padding: 0;
   }
   .header__navbar {
-    width: 70%;
+    width: 65%;
   }
   .header__logo {
     margin-left: 0;
