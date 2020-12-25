@@ -1,0 +1,19 @@
+{
+  "name": "guzanov-studio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anastasia-mironova/guzanov-studio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anastasia-mironova/guzanov-studio/issues"
+  },
+  "homepage": "https://github.com/anastasia-mironova/guzanov-studio#readme"
+}
