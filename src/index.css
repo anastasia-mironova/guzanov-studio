@@ -15,6 +15,7 @@ body {
   width: 100vw;
   margin: 0;
   background-color: #f5f8f8;
+  overflow-x: hidden;
 }
 
 .preview {
@@ -22,7 +23,6 @@ body {
   background-size: cover;
   height: 145vh;
   width: 100vw;
-  /* font-size: 24px; */
   font-size: 3vh;
   display: flex;
   flex-direction: column;
@@ -34,16 +34,28 @@ body {
   background-size: cover;
   height: 48px;
   width: 48px;
-  margin-right: 90px;
+  margin: 0 0 0 160px;
+}
+.default {
+  width: 920px;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
 }
 
 .preview__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 65px;
-  margin: 0 160px;
+
+  /* padding: 65px 160px 0 160px; */
   background-color: #ea3730;
+  padding-top: 30px;
+  width: 100%;
 }
 
 .header__number-phone_wrapper {
@@ -54,8 +66,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 160px 0 0;
 }
-
+.header__number-phone_wrapper:hover {
+  background-color: #181818e5;
+  border: 2px solid #181818e5;
+}
 .logo-navbar_wrapper {
   display: flex;
   align-items: center;
@@ -91,7 +107,9 @@ body {
 .header-link {
   color: #f5f8f8;
 }
-
+.header-link:hover {
+  color: #181818;
+}
 .preview__content {
   display: flex;
   flex-direction: column;
@@ -128,7 +146,9 @@ body {
   box-shadow: 0px 11px 28px rgba(71, 71, 71, 0.25);
   border-radius: 12px;
 }
-
+.content__button-more-info:hover {
+  background-color: #181818e5;
+}
 .preview-button-link {
   color: #ea3730;
   font-weight: 600;
@@ -186,7 +206,6 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 0 10px;
-
   min-width: 330px;
 }
 
@@ -237,6 +256,10 @@ body {
   font-size: 2.8vh;
   padding: 1.5vh 1.7vw;
 }
+.button-site-order-link:hover {
+  background-color: #181818e5;
+  border-radius: 35px;
+}
 
 .order-section__item-wrapper :last-child .order-card__content {
   margin-top: 85px;
@@ -283,7 +306,9 @@ body {
   color: #898989;
   margin-top: 60px;
 }
-
+.case-section__see-more-button:hover {
+  color: #181818;
+}
 /* .faq-section__header {
   font-weight: 600;
   font-size: 64px;
@@ -459,7 +484,10 @@ body {
   border: 0px solid #fffefe;
   color: #ea3730;
 }
-
+.feedback-form__submit-btn:hover {
+  background-color: #181818e5;
+  border-radius: 4px;
+}
 .feedback-form__submit-btn span {
   font-weight: 600;
   font-size: 2.8vh;
@@ -534,4 +562,63 @@ body {
   height: 133px;
   align-self: flex-start;
   margin: 50px 150px 0 0;
+}
+@media screen and (max-width: 975px) {
+  .preview__header {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .logo-navbar_wrapper {
+    width: 90%;
+    justify-content: space-around;
+  }
+  .header__navbar ul {
+    padding: 0;
+  }
+  .header__navbar {
+    width: 70%;
+  }
+  .header__logo {
+    margin-left: 0;
+  }
+  .header__number-phone_wrapper {
+    margin: 0;
+  }
+  .preview__content {
+    margin-left: 0;
+    margin: 0 auto;
+  }
+  .order-section__item-wrapper {
+    flex-wrap: wrap;
+  }
+  .order-card {
+    margin-bottom: 20px;
+  }
+  .cases-section {
+    height: 70vh;
+  }
+  .case__item {
+    height: 50%;
+  }
+  .faq-section__questions-wrapper-row {
+    flex-direction: column;
+  }
+  .faq-section__item-wrapper,
+  .faq-section__questions-wrapper-row:first-child {
+    margin-bottom: 30px;
+  }
+  .feedback-form__row {
+    flex-wrap: wrap;
+  }
+  .feedback-form__submit-btn {
+    margin-top: 40px;
+  }
+  .feedback-section__cat-logo {
+    top: -17vh;
+  }
+  .contact-section-wrapper {
+    margin-left: 30px;
+    margin-bottom: 70px;
+  }
 }
