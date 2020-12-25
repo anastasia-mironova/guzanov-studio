@@ -284,15 +284,8 @@ body {
   background-size: cover;
   height: 150vh;
   width: 100%;
+  text-align: center;
 }
-
-/* .cases-section__header {
-  margin-bottom: 110px;
-  font-weight: 600;
-  font-size: 64px;
-  font-weight: 600;
-  color: #181818;
-} */
 
 .case__item-wrapper {
   display: flex;
@@ -321,16 +314,7 @@ body {
   color: #181818;
 }
 
-/* .faq-section__header {
-  font-weight: 600;
-  font-size: 64px;
-  color: #181818;
-  font-weight: 700;
-  margin-bottom: 100px;
-} */
-
 .faq-section {
-  /* margin-top: 20vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -645,6 +629,7 @@ body {
   .contact-section-wrapper {
     margin-left: 30px;
     margin-bottom: 70px;
+    margin-top: 15px;
   }
   .contact-section__header, .feedback-section__header {
     font-size: 4vh;
