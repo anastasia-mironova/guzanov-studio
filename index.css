@@ -78,6 +78,7 @@ body {
 .logo-navbar_wrapper {
   display: flex;
   align-items: center;
+  width: 60%;
 }
 
 .header__number-phone-text {
@@ -92,7 +93,7 @@ body {
 }
 
 .header__navbar {
-  min-width: 300px;
+  /* min-width: 300px; */
   width: 40%;
 }
 
@@ -583,7 +584,7 @@ body {
     align-items: center;
   }
   .logo-navbar_wrapper {
-    width: 90%;
+    width: 100%;
     justify-content: space-around;
   }
   .header__navbar ul {
@@ -600,7 +601,8 @@ body {
   }
   .preview__content {
     margin-left: 0;
-    margin: 0 auto;
+    margin: 0 0 0 20px;
+    ;
   }
   .contact-section__header {
     font-size: 3vh;
@@ -644,7 +646,12 @@ body {
     font-size: 4vh;
   }
   .content__header {
-    text-align: center;
+    text-align: left;
+    font-size: 10vh;
+  }
+  .content__header-description {
+    font-size: 3.5vh;
+    width: 90%;
   }
   .preview__cat-logo {
     display: none;
