@@ -585,7 +585,7 @@ body {
     align-items: center;
   }
   .logo-navbar_wrapper {
-    width: 100%;
+    width: 85%;
     justify-content: space-around;
   }
   .header__navbar ul {
@@ -599,6 +599,9 @@ body {
   }
   .header__number-phone_wrapper {
     margin: 0;
+  }
+  .order-card__header {
+    text-align: center;
   }
   .preview__content {
     margin-left: 0;
