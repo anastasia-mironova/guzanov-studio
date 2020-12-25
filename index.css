@@ -603,7 +603,7 @@ body {
     margin: 0 auto;
   }
   .contact-section__header {
-    font-size: 6vh;
+    font-size: 3vh;
     text-align: left;
   }
   .order-section__item-wrapper {
@@ -640,6 +640,9 @@ body {
     margin-left: 30px;
     margin-bottom: 70px;
   }
+  .contact-section__header, .feedback-section__header {
+    font-size: 4vh;
+  }
   .content__header {
     text-align: center;
   }
@@ -650,7 +653,7 @@ body {
     width: 90%;
   }
   .email__value, .phone-number__value {
-    font-size: 0.7em;
+    font-size: 0.5em;
   }
   .address {
     width: 100%
