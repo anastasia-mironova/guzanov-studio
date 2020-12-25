@@ -633,6 +633,7 @@ body {
   }
   .contact-section__header, .feedback-section__header {
     font-size: 4vh;
+    width: 90%;
   }
   .content__header {
     text-align: left;
