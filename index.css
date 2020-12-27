@@ -174,7 +174,34 @@ body {
   bottom: -27vh;
   left: 40vh;
 }
-
+.left-eye,
+.right-eye {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #f5f8f8;
+  position: relative;
+}
+.eye-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-right: 7px;
+}
+.left-eye {
+}
+.preview__cat-logo .right-eye {
+  margin-top: 7px;
+}
+.pupil {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #ea3730;
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
 .order-section {
   margin-top: 12vh;
   width: 100%;
@@ -380,7 +407,30 @@ body {
   top: -26vh;
   left: -30vw;
 }
+.feedback-section__eye-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 17px;
+  margin-right: 7px;
+}
+.contact__eye-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 17px;
+  padding-left: 7px;
+}
+.contact__left-eye .pupil,
+.contact__right-eye .pupil {
+  background-color: #181818;
 
+  width: 5px;
+  height: 5px;
+}
+.contact__left-eye,
+.contact__right-eye {
+  width: 15px;
+  height: 15px;
+}
 .feedback-section__header {
   width: 60%;
   height: auto;
@@ -501,13 +551,16 @@ body {
   height: auto;
 }
 
-.email, .phone-number {
+.email,
+.phone-number {
   font-weight: 600;
   font-size: 8vh;
   margin: 15px 0;
 }
 
-.email__label, .phone-number__label, .address {
+.email__label,
+.phone-number__label,
+.address {
   font-size: 2.8vh;
 }
 
@@ -540,7 +593,9 @@ body {
   justify-content: space-between;
 }
 
-.email__value, .phone-number__value, .address-text-decorate {
+.email__value,
+.phone-number__value,
+.address-text-decorate {
   color: #fffefe;
 }
 
@@ -590,7 +645,6 @@ body {
   .preview__content {
     margin-left: 0;
     margin: 0 0 0 20px;
-    ;
   }
   .contact-section__header {
     font-size: 3vh;
@@ -614,7 +668,8 @@ body {
   .faq-section__questions-wrapper-row {
     flex-direction: column;
   }
-  .faq-section__item-wrapper, .faq-section__questions-wrapper-row:first-child {
+  .faq-section__item-wrapper,
+  .faq-section__questions-wrapper-row:first-child {
     margin-bottom: 30px;
   }
   .feedback-form__row {
@@ -631,7 +686,8 @@ body {
     margin-bottom: 70px;
     margin-top: 15px;
   }
-  .contact-section__header, .feedback-section__header {
+  .contact-section__header,
+  .feedback-section__header {
     font-size: 4vh;
     width: 90%;
   }
@@ -652,11 +708,12 @@ body {
   .faq-section__item-wrapper {
     width: 90%;
   }
-  .email__value, .phone-number__value {
+  .email__value,
+  .phone-number__value {
     font-size: 0.5em;
   }
   .address {
-    width: 100%
+    width: 100%;
   }
   .phone-number {
     white-space: nowrap;

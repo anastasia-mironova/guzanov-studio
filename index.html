@@ -31,7 +31,16 @@
             <div class="content__button-more-info">
                 <a href="#contact" class="link preview-button-link">Бесплатная консультация</a>
             </div>
-            <div class="preview__cat-logo"></div>
+            <div class="preview__cat-logo">
+                <div class="eye-wrapper">
+                    <div class="left-eye">
+                        <div class="pupil"></div>
+                    </div>
+                    <div class="right-eye">
+                        <div class="pupil"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="order-section" id="order-section">
@@ -113,26 +122,39 @@
         </div>
     </section>
     <section class="feedback-section" id="feedback-form">
-        <div class="feedback-section__cat-logo"></div>
+        <div class="feedback-section__cat-logo">
+            <div class="feedback-section__eye-wrapper">
+                <div class="feedback__left-eye left-eye">
+                    <div class="pupil"></div>
+                </div>
+                <div class="feedback__right-eye right-eye">
+                    <div class="pupil"></div>
+                </div>
+            </div>
+        </div>
         <div class="feedback-section_wrapper">
             <span class="feedback-section__header">Хотите работать с нами? Заполните форму</span>
-            <form action="/send.php" method="POST" class="feedback-section__feedback-form feedback-form">
+            <form action="/feedback/mail.php" method="POST" enctype="multipart/form-data"
+                class="feedback-section__feedback-form feedback-form">
                 <div class="feedback-form__row">
                     <div class="feedback-form__item-field-wrapper">
                         <label class="feedback-form__name-label feedback-form__label">Имя</label>
-                        <input type="text" name="name" class="feedback-form__name-field feedback-form__field"></div>
+                        <input required type="text" name="name" class="feedback-form__name-field feedback-form__field">
+                    </div>
                     <div class="feedback-form__item-field-wrapper">
                         <label class="feedback-form__phone-label feedback-form__label">Телефон</label>
-                        <input type="tel" name="phone" class="feedback-form__phone-field feedback-form__field"></div>
+                        <input required type="tel" name="phone" class="feedback-form__phone-field feedback-form__field">
+                    </div>
                     <div class="feedback-form__item-field-wrapper">
                         <label class="feedback-form__email-label feedback-form__label">Почта</label>
-                        <input type="email" name="email" class="feedback-form__email-field feedback-form__field"></div>
+                        <input required type="email" name="email"
+                            class="feedback-form__email-field feedback-form__field"></div>
                 </div>
                 <div class="feedback-form__row">
                     <div class="feedback-form__item-textarea-wrapper">
                         <label class="feedback-form__description-project-label feedback-form__label">Описание
                             проекта</label>
-                        <textarea name="project-description"
+                        <textarea required name="project-description"
                             class="feedback-form__description-project-textarea feedback-form__textarea"></textarea>
                     </div>
                     <div class="feedback-form__item-upload-wrapper">
@@ -161,7 +183,16 @@
                         Каширина 1А оф. 11</a> </span>
             </div>
         </div>
-        <div class="contact-section__cat-logo"></div>
+        <div class="contact-section__cat-logo">
+            <div class="contact__eye-wrapper">
+                <div class="contact__left-eye left-eye">
+                    <div class="pupil"></div>
+                </div>
+                <div class="contact__right-eye right-eye">
+                    <div class="pupil"></div>
+                </div>
+            </div>
+        </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
