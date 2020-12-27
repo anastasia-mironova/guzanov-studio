@@ -27,12 +27,20 @@ document.onmousemove = function(event) {
   document.querySelector(
     ".feedback__right-eye"
   ).style.transform = `rotate(${57.2958 * arcctg(x - 19, y)}deg)`;
+  x -= 700;
+  y -= 300;
+
+  let pos = document
+    .querySelector(".contact__left-eye")
+    .getBoundingClientRect();
+  console.log(pos);
+  console.log(y);
   document.querySelector(
     ".contact__left-eye"
-  ).style.transform = `rotate(${57.2958 * arcctg(-x, y)}deg)`;
+  ).style.transform = `rotate(${57.2958 * arcctg(x, y)}deg)`;
   document.querySelector(
     ".contact__right-eye"
-  ).style.transform = `rotate(${57.2958 * arcctg(-x - 19, y)}deg)`;
+  ).style.transform = `rotate(${57.2958 * arcctg(x - 19, y)}deg)`;
 
   function arcctg(x, y) {
     if (x > 0 && y > 0) return Math.PI / 2 - Math.atan(x / y);
