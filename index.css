@@ -389,6 +389,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #181818;
+  position: relative;
 }
 
 .feedback-section__cat-logo {
@@ -397,9 +398,9 @@ body {
   background-size: cover;
   width: 128px;
   height: 133px;
-  position: relative;
-  top: -26vh;
-  left: -30vw;
+  position: absolute;
+  top: 20px;
+  left: 350px
 }
 
 .feedback-section__eye-wrapper {
@@ -536,7 +537,7 @@ body {
 
 .feedback-form__submit-btn span {
   font-weight: 600;
-  font-size: 2.8vh;
+  font-size: 2vh;
   color: #ea3730;
 }
 
