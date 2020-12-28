@@ -1,9 +1,9 @@
 <?php
 if (isset($_POST['contactFF'])) {
   $to = "dedsid48@gmail.com";
-  $from = "GUZANOV STUDIO";
+  $from = "HI.GUZANOV@STUDIO";
   $subject = "Заполнена контактная форма на сайте " . $_SERVER['HTTP_REFERER'];
-  $message = "Имя пользователя: " . $_POST['nameFF'] . "\nEmail пользователя " . $_POST['contactFF'] . "\nТелефон пользователя " . $_POST['telFF'] . "\nСообщение: " . $_POST['projectFF'] . "\n\nАдрес сайта: " . $_SERVER['HTTP_REFERER'];
+  $message = "Сообщение:" . "\nИмя пользователя: " . $_POST['nameFF'] . "\nEmail пользователя " . $_POST['contactFF'] . "\nТелефон пользователя " . $_POST['telFF'] . "\nСообщение: " . $_POST['projectFF'] . "\n\nАдрес сайта: " . $_SERVER['HTTP_REFERER'];
 
   $boundary = md5(date('r', time()));
   $filesize = '';
