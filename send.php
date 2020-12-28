@@ -1,54 +1,45 @@
 <?php
-
-if (isset($_POST['name'])) {
-    $name = $_POST['name'];
+if (isset ($_POST['contactFF'])) {
+  $to = "dedsid48@gmail.com";
+  $from = "fffffffffff";
+  $subject = "Заполнена контактная форма на сайте ".$_SERVER['HTTP_REFERER'];
+  $message = "Имя пользователя: ".$_POST['nameFF']."\nEmail пользователя ".$_POST['contactFF']."\nТелефон пользователя ".$_POST['telFF']."\nСообщение: ".$_POST['projectFF']."\n\nАдрес сайта: ".$_SERVER['HTTP_REFERER'];
+ 
+  $boundary = md5(date('r', time()));
+  $filesize = '';
+  $headers = "MIME-Version: 1.0\r\n";
+  $headers .= "From: " . $from . "\r\n";
+  $headers .= "Reply-To: " . $from . "\r\n";
+  $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
+  $message="
+Content-Type: multipart/mixed; boundary=\"$boundary\"
+ 
+--$boundary
+Content-Type: text/plain; charset=\"utf-8\"
+Content-Transfer-Encoding: 7bit
+ 
+$message";
+     if(is_uploaded_file($_FILES['fileFF']['tmp_name'])) {
+         $attachment = chunk_split(base64_encode(file_get_contents($_FILES['fileFF']['tmp_name'])));
+         $filename = $_FILES['fileFF']['name'];
+         $filetype = $_FILES['fileFF']['type'];
+         $filesize = $_FILES['fileFF']['size'];
+         $message.="
+ 
+--$boundary
+Content-Type: \"$filetype\"; name=\"$filename\"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename=\"$filename\"
+ 
+$attachment";
+     }
+   $message.="
+--$boundary--";
+ 
+  if ($filesize < 10000000) { // проверка на общий размер всех файлов. Многие почтовые сервисы не принимают вложения больше 10 МБ
+    mail($to, $subject, $message, $headers);
+    echo $_POST['nameFF'].', Ваше сообщение отправлено, спасибо!';
+  } else {
+    echo 'Извините, письмо не отправлено. Размер всех файлов превышает 10 МБ.';
+  }
 }
-if (isset($_POST['phone'])) {
-    $phone = $_POST['phone'];
-}
-if (isset($_POST['email'])) {
-    $email = $_POST['email'];
-}
-if (isset($_POST['project-description'])) {
-    $message = $_POST['project-description'];
-}
-$myaddres  = "anast.mir22@yandex.ru"; // кому отправляем
-
-
-$mes = "Тема: Заявка с сайта Guzanov Studio \nИмя: $name \n Email: $email \n Телефон: $phone \n Описание проекта: $message";
-
-$sub = 'Заявка'; //сабж
-$emailTitle = 'Заявка с сайта Guzanov Studio'; // от кого
-
-$send = mail($myaddres, $sub, $mes, "Content-type:text/plain; charset = utf-8\r\nFrom:$email");
-// отправляем письмо 
-
-ini_set('short_open_tag', 'On');
-header('Refresh: 3; URL=index.html');
-?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="refresh" content="3; url=index.html">
-    <title>Спасибо! Мы свяжемся с вами!</title>
-    <meta name="generator">
-    <script type="text/javascript">
-        setTimeout('location.replace("/index.html")', 3000);
-    </script>
-    <style>
-        body {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>Спасибо! Мы свяжемся с вами!</h1>
-</body>
-
-</html>

@@ -134,32 +134,33 @@
         </div>
         <div class="feedback-section_wrapper">
             <span class="feedback-section__header">Хотите работать с нами? Заполните форму</span>
-            <form action="/feedback/mail.php" method="POST" enctype="multipart/form-data"
-                class="feedback-section__feedback-form feedback-form">
+            <form action="send.php" method="POST" enctype="multipart/form-data"
+                class="feedback-section__feedback-form feedback-form" id="ajax-contact-form">
                 <div class="feedback-form__row">
                     <div class="feedback-form__item-field-wrapper">
                         <label class="feedback-form__name-label feedback-form__label">Имя</label>
-                        <input required type="text" name="name" class="feedback-form__name-field feedback-form__field">
+                        <input required type="text" name="nameFF"
+                            class="feedback-form__name-field feedback-form__field">
                     </div>
                     <div class="feedback-form__item-field-wrapper">
                         <label class="feedback-form__phone-label feedback-form__label">Телефон</label>
-                        <input required type="tel" name="phone" class="feedback-form__phone-field feedback-form__field">
+                        <input required type="tel" name="telFF" class="feedback-form__phone-field feedback-form__field">
                     </div>
                     <div class="feedback-form__item-field-wrapper">
                         <label class="feedback-form__email-label feedback-form__label">Почта</label>
-                        <input required type="email" name="email"
+                        <input required type="email" name="contactFF"
                             class="feedback-form__email-field feedback-form__field"></div>
                 </div>
                 <div class="feedback-form__row">
                     <div class="feedback-form__item-textarea-wrapper">
                         <label class="feedback-form__description-project-label feedback-form__label">Описание
                             проекта</label>
-                        <textarea required name="project-description"
+                        <textarea required name="projectFF"
                             class="feedback-form__description-project-textarea feedback-form__textarea"></textarea>
                     </div>
                     <div class="feedback-form__item-upload-wrapper">
                         <label for="file" class="feedback-form__upload-label">Загрузите файл или ТЗ</label>
-                        <input id="file" type="file" name="upload-file" class="feedback-form__upload-input">
+                        <input id="file" type="file" name="fileFF" class="feedback-form__upload-input">
                     </div>
                     <button class="feedback-form__submit-btn" value="send" type="submit"><span>Отправить
                             заявку</span></button>
