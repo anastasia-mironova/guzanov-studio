@@ -15,33 +15,24 @@ $(".preview__cat-logo").mousemove(function(e) {
 });
 
 document.onmousemove = function(event) {
-  let x = event.x - 50;
-  let y = event.y - 50;
-  document.querySelector(".left-eye").style.transform = `rotate(${57.2958 *
-    arcctg(x, y)}deg)`;
-  document.querySelector(".right-eye").style.transform = `rotate(${57.2958 *
-    arcctg(x - 19, y)}deg)`;
-  document.querySelector(
-    ".feedback__left-eye"
-  ).style.transform = `rotate(${57.2958 * arcctg(x, y)}deg)`;
-  document.querySelector(
-    ".feedback__right-eye"
-  ).style.transform = `rotate(${57.2958 * arcctg(x - 19, y)}deg)`;
-  x -= 700;
-  y -= 300;
+  function rotateEye(leftEyeSelector, rightEyeSelector) {
+    let x, y;
+    const leftEye = document.querySelector(leftEyeSelector);
+    x = event.x - leftEye.getBoundingClientRect().left;
+    y = event.y - leftEye.getBoundingClientRect().top;
+    leftEye.style.transform = `rotate(${57.2958 * arcctg(x, y)}deg)`;
+    const rightEye = document.querySelector(rightEyeSelector);
+    x = event.x - rightEye.getBoundingClientRect().left;
+    y = event.y - rightEye.getBoundingClientRect().top;
+    rightEye.style.transform = `rotate(${57.2958 *
+      arcctg(x - rightEye.getBoundingClientRect().width / 2, y)}deg)`;
+  }
 
-  let pos = document
-    .querySelector(".contact__left-eye")
-    .getBoundingClientRect();
-  // console.log(pos);
-  // console.log(y);
-  document.querySelector(
-    ".contact__left-eye"
-  ).style.transform = `rotate(${57.2958 * arcctg(x, y)}deg)`;
-  document.querySelector(
-    ".contact__right-eye"
-  ).style.transform = `rotate(${57.2958 * arcctg(x - 19, y)}deg)`;
+  rotateEye(".left-eye", ".right-eye");
 
+  rotateEye(".feedback__left-eye", ".feedback__right-eye");
+
+  rotateEye(".contact__left-eye", ".contact__right-eye");
   function arcctg(x, y) {
     if (x > 0 && y > 0) return Math.PI / 2 - Math.atan(x / y);
     if (x < 0 && y > 0) return Math.PI / 2 - Math.atan(x / y);
@@ -91,9 +82,15 @@ document
     mobileMenuPageHandler("flex");
   });
 const mobileLinkMenu = document.getElementsByClassName("mobile-link");
-console.log(mobileLinkMenu);
+
 Array.from(mobileLinkMenu).map(link => {
   link.addEventListener("click", () => {
     mobileMenuPageHandler("flex");
   });
+});
+document.body.addEventListener("resize", () => {
+  if (document.documentElement.clientWidth() > 1100) {
+    const mobileNavbar = document.querySelector(".mobile");
+    mobileNavbar.style.display = "none";
+  }
 });
