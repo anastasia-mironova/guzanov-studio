@@ -853,4 +853,7 @@ body {
   .contact-section__cat-logo {
     margin: 50px 20px 0 0;
   } */
+  .header__mobile-navbar_wrapper {
+    margin: 10px;
+  }
 }
