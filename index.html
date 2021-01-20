@@ -10,8 +10,33 @@
 </head>
 
 <body>
+    <div class="header__mobile-navbar-page hidden">
+        <div class="mobile-navbar__close-btn"></div>
+        <nav class="header__mobile-navbar navbar">
+            <ul class="mobile-navbar__links">
+                <li class="mobile-link__item"><a class="link header-link mobile-link" href="#order-section">Цены</a>
+                </li>
+                <li class="mobile-link__item"><a class="link header-link mobile-link" href="#cases">Кейсы</a></li>
+                <li class="mobile-link__item"><a class="link header-link mobile-link" href="#faq">F.A.Q.</a></li>
+            </ul>
+        </nav>
+    </div>
     <section class="preview" id="preview">
-        <header class="preview__header header default">
+        <header class="preview__header header default mobile">
+            <div class="logo-navbar_wrapper">
+                <a href="#preview" class="header__logo logo link"></a>
+            </div>
+            </div>
+            <div class="header__mobile-navbar_wrapper">
+                <div class="burger-mobile-menu__line"></div>
+                <div class="burger-mobile-menu__line"></div>
+                <div class="burger-mobile-menu__line"></div>
+            </div>
+            <div class="header__number-phone-mobile_wrapper"><a href="tel:79156205803"
+                    class="header__mobile-number-phone-text link"></a>
+            </div>
+        </header>
+        <header class="preview__header header default desktop">
             <div class="logo-navbar_wrapper">
                 <a href="#preview" class="header__logo logo link"></a>
                 <nav class="header__navbar navbar">
@@ -22,8 +47,27 @@
                     </ul>
                 </nav>
             </div>
+            <!-- <div class="header__mobile-navbar_wrapper">
+                <div class="burger-mobile-menu__line"></div>
+                <div class="burger-mobile-menu__line"></div>
+                <div class="burger-mobile-menu__line"></div>
+            </div> -->
             <div class="header__number-phone_wrapper"><a href="tel:79156205803"
-                    class="header__number-phone-text link">+7 915 620 58 03</a></div>
+                    class="header__number-phone-text link">+7 915 620 58 03</a>
+            </div>
+            <!-- <div class="header__number-phone-mobile_wrapper"><a href="tel:79156205803"
+                    class="header__mobile-number-phone-text link"></a>
+            </div> -->
+            <!-- <div class="header__mobile-navbar-page">
+                <div class="mobile-navbar__close-btn">x</div>
+                <nav class="header__navbar navbar">
+                    <ul class="mobile-navbar__links">
+                        <li class="mobile-link__item"><a class="link header-link" href="#order-section">Цены</a></li>
+                        <li class="mobile-link__item"><a class="link header-link" href="#cases">Кейсы</a></li>
+                        <li class="mobile-link__item"><a class="link header-link" href="#faq">F.A.Q.</a></li>
+                    </ul>
+                </nav>
+            </div> -->
         </header>
         <div class="preview__content content">
             <div class="content__header">Создание сайта под ключ</div>

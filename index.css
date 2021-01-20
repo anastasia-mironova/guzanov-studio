@@ -16,6 +16,7 @@ body {
   margin: 0;
   background-color: #f5f8f8;
   overflow-x: hidden;
+  position: relative;
 }
 
 .preview {
@@ -60,7 +61,21 @@ body {
   width: 100%;
 }
 
-.header__number-phone_wrapper {
+.header__mobile-navbar-page {
+  background-color: #ea3730;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.header__number-phone_wrapper, .header__mobile-navbar_wrapper, .header__number-phone-mobile_wrapper {
   border: 2px solid #f5f8f8;
   border-radius: 12px;
   height: auto;
@@ -71,7 +86,24 @@ body {
   margin: 0 160px 0 0;
 }
 
-.header__number-phone_wrapper:hover {
+.mobile {
+  display: none;
+}
+
+.header__mobile-navbar_wrapper, .header__number-phone-mobile_wrapper {
+  padding: 15px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.burger-mobile-menu__line {
+  width: 35px;
+  margin: 4px 0;
+  border: 2px solid white;
+  border-radius: 25%;
+}
+
+.header__number-phone_wrapper:hover, .header__number-phone-mobile_wrapper:hover, .header__mobile-navbar_wrapper:hover {
   background-color: #181818e5;
   border: 2px solid #181818e5;
 }
@@ -88,9 +120,17 @@ body {
   padding: 1.5vh 1.5vw;
 }
 
+.header__mobile-number-phone-text {
+  padding: 10px;
+}
+
 .header__number-phone-text::before {
   content: url("./assets/images/handset_logo.svg");
   padding-right: 10px;
+}
+
+.header__mobile-number-phone-text::before {
+  content: url("./assets/images/handset_logo.svg");
 }
 
 .header__navbar {
@@ -103,6 +143,41 @@ body {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+}
+
+.mobile-navbar__links {
+  width: 100%;
+  height: 50%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-link__item {
+  width: 50%;
+  font-size: 36px;
+  height: 40px;
+  margin: 20px 0;
+  font-weight: 900;
+}
+
+.mobile-navbar__close-btn {
+  background-image: url("./assets/images/close.png");
+  width: 50px;
+  height: 50px;
+  align-self: flex-end;
+  margin-right: 10%;
+  margin-top: 2%;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: flex;
 }
 
 .link {
@@ -247,6 +322,7 @@ body {
   text-align: center;
   font-weight: 700;
   margin-top: 15%;
+  word-break: break-all;
 }
 
 .order-card__content {
@@ -262,6 +338,7 @@ body {
   color: #ea3730;
   margin-bottom: 20px;
   font-weight: 700;
+  text-align: center;
 }
 
 .order-card__content-description {
@@ -609,15 +686,16 @@ body {
   margin: 50px 150px 0 0;
 }
 
-@media screen and (max-width: 975px) {
-  .preview__header {
+@media screen and (max-width: 1100px) {
+  /* .preview__header {
     flex-direction: column;
     width: 100%;
     align-items: center;
-  }
-  .logo-navbar_wrapper {
+  } */
+  /* .logo-navbar_wrapper {
     width: 85%;
     justify-content: space-around;
+    flex-direction: column;
   }
   .header__navbar ul {
     padding: 0;
@@ -630,13 +708,25 @@ body {
   }
   .header__number-phone_wrapper {
     margin: 0;
+  } */
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
   }
   .order-card__header {
     text-align: center;
   }
   .preview__content {
     margin-left: 0;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 50px;
+  }
+  .header__logo {
+    margin-left: 50px;
+  }
+  .header__number-phone-mobile_wrapper {
+    margin-right: 50px;
   }
   .contact-section__header {
     font-size: 3vh;
@@ -659,6 +749,9 @@ body {
   }
   .faq-section__questions-wrapper-row {
     flex-direction: column;
+  }
+  .feedback-section_wrapper {
+    width: 93%;
   }
   .faq-section__item-wrapper, .faq-section__questions-wrapper-row:first-child {
     margin-bottom: 30px;

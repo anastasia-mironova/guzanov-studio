@@ -33,8 +33,8 @@ document.onmousemove = function(event) {
   let pos = document
     .querySelector(".contact__left-eye")
     .getBoundingClientRect();
-  console.log(pos);
-  console.log(y);
+  // console.log(pos);
+  // console.log(y);
   document.querySelector(
     ".contact__left-eye"
   ).style.transform = `rotate(${57.2958 * arcctg(x, y)}deg)`;
@@ -74,4 +74,26 @@ $(function() {
     },
     false
   );
+});
+const mobileMenuPageHandler = display => {
+  const mobileMenuPage = document.querySelector(".header__mobile-navbar-page");
+  mobileMenuPage.classList.toggle("active");
+  const mobileNavbar = document.querySelector(".mobile");
+  mobileNavbar.style.display = display;
+};
+document
+  .querySelector(".header__mobile-navbar_wrapper")
+  .addEventListener("click", () => mobileMenuPageHandler("none"));
+
+document
+  .querySelector(".mobile-navbar__close-btn")
+  .addEventListener("click", () => {
+    mobileMenuPageHandler("flex");
+  });
+const mobileLinkMenu = document.getElementsByClassName("mobile-link");
+console.log(mobileLinkMenu);
+Array.from(mobileLinkMenu).map(link => {
+  link.addEventListener("click", () => {
+    mobileMenuPageHandler("flex");
+  });
 });
