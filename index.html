@@ -38,29 +38,24 @@
         </header>
         <header class="preview__header header default desktop">
             <div class="logo-navbar_wrapper">
-                <a href="#preview" class="header__logo logo link"></a>
-                <nav class="header__navbar navbar">
+                <a href="#preview" class="header__logo logo link" tabindex="1" </a> <nav class="header__navbar navbar">
                     <ul class="navbar__links">
-                        <li class="link__item"><a class="link header-link" href="#order-section">Цены</a></li>
-                        <li class="link__item"><a class="link header-link" href="#cases">Кейсы</a></li>
-                        <li class="link__item"><a class="link header-link" href="#faq">F.A.Q.</a></li>
+                        <li class="link__item"><a class="link header-link" href="#order-section" tabindex="2">Цены</a>
+                        </li>
+                        <li class="link__item"><a class="link header-link" href="#cases" tabindex="3">Кейсы</a></li>
+                        <li class="link__item"><a class="link header-link" href="#faq" tabindex="4">F.A.Q.</a></li>
                     </ul>
-                </nav>
+                    </nav>
             </div>
-            <!-- <div class="header__mobile-navbar_wrapper">
-                <div class="burger-mobile-menu__line"></div>
-                <div class="burger-mobile-menu__line"></div>
-                <div class="burger-mobile-menu__line"></div>
-            </div> -->
-            <div class="header__number-phone_wrapper"><a href="tel:79156205803"
-                    class="header__number-phone-text link">+7 915 620 58 03</a>
+            <div class="header__number-phone_wrapper"><a href="tel:79156205803" class="header__number-phone-text link"
+                    tabindex="5">+7 915 620 58 03</a>
             </div>
         </header>
         <div class="preview__content content">
             <div class="content__header">Создание сайта под ключ</div>
             <div class="content__header-description">Учитываем специфику и особенности цифровой среды</div>
             <div class="content__button-more-info">
-                <a href="#contact" class="link preview-button-link">Бесплатная консультация</a>
+                <a href="#contact" class="link preview-button-link" tabindex="6">Бесплатная консультация</a>
             </div>
             <div class="preview__cat-logo">
                 <div class="eye-wrapper">
@@ -85,7 +80,7 @@
                         количеством товаров</span>
                 </div>
                 <div class="order-card__button-site-order button-site-order">
-                    <a href="#feedback-form" class="link button-site-order-link">Заказать сайт</a>
+                    <a href="#feedback-form" class="link button-site-order-link" tabindex="7">Заказать сайт</a>
                 </div>
             </div>
             <div class="order-section__item order-card">
@@ -96,7 +91,7 @@
                         увеличит узнаваемость Вашей компании</span>
                 </div>
                 <div class="order-card__button-site-order button-site-order">
-                    <a href="#feedback-form" class="link button-site-order-link">Заказать сайт</a>
+                    <a href="#feedback-form" class="link button-site-order-link" tabindex="8">Заказать сайт</a>
                 </div>
             </div>
             <div class="order-section__item order-card">
@@ -108,7 +103,7 @@
                             менеджеров</span>
                     </div>
                     <div class="order-card__button-site-order button-site-order">
-                        <a href="#feedback-form" class="link button-site-order-link">Заказать сайт</a>
+                        <a href="#feedback-form" class="link button-site-order-link" tabindex="9">Заказать сайт</a>
                     </div>
             </div>
         </div>
@@ -123,7 +118,7 @@
             <div class="case__item"></div>
             <div class="case__item"></div>
         </div>
-        <span class="case-section__see-more-button">Посмотреть все</span>
+        <span class="case-section__see-more-button" tabindex="10">Посмотреть все</span>
     </section>
     <section class="faq-section" id="faq">
         <span class="faq-section__header section-header">F.A.Q.</span>
@@ -170,30 +165,32 @@
                 <div class="feedback-form__row">
                     <div class="feedback-form__item-field-wrapper">
                         <label class="feedback-form__name-label feedback-form__label">Имя</label>
-                        <input required type="text" name="nameFF"
-                            class="feedback-form__name-field feedback-form__field">
+                        <input required type="text" name="nameFF" class="feedback-form__name-field feedback-form__field"
+                            tabindex="11">
                     </div>
                     <div class="feedback-form__item-field-wrapper">
                         <label class="feedback-form__phone-label feedback-form__label">Телефон</label>
-                        <input required type="tel" name="telFF" class="feedback-form__phone-field feedback-form__field">
+                        <input required type="tel" name="telFF" class="feedback-form__phone-field feedback-form__field"
+                            tabindex="12">
                     </div>
                     <div class="feedback-form__item-field-wrapper">
                         <label class="feedback-form__email-label feedback-form__label">Почта</label>
                         <input required type="email" name="contactFF"
-                            class="feedback-form__email-field feedback-form__field"></div>
+                            class="feedback-form__email-field feedback-form__field" tabindex="13"></div>
                 </div>
                 <div class="feedback-form__row">
                     <div class="feedback-form__item-textarea-wrapper">
                         <label class="feedback-form__description-project-label feedback-form__label">Описание
                             проекта</label>
                         <textarea required name="projectFF"
-                            class="feedback-form__description-project-textarea feedback-form__textarea"></textarea>
+                            class="feedback-form__description-project-textarea feedback-form__textarea"
+                            tabindex="14"></textarea>
                     </div>
                     <div class="feedback-form__item-upload-wrapper">
                         <label for="file" class="feedback-form__upload-label">Загрузите файл или ТЗ</label>
-                        <input id="file" type="file" name="fileFF" class="feedback-form__upload-input">
+                        <input id="file" type="file" name="fileFF" class="feedback-form__upload-input" tabindex="15">
                     </div>
-                    <button class="feedback-form__submit-btn" value="send" type="submit"><span>Отправить
+                    <button class="feedback-form__submit-btn" value="send" type="submit" tabindex="16"><span>Отправить
                             заявку</span></button>
                 </div>
             </form>
@@ -205,14 +202,14 @@
             <div class="contact-section__contact-info contact-info">
                 <div class="contact-info__item email">
                     <span class="email__label">email</span>
-                    <a href="mailto:hi@guzanov.studio" class=" link email__value">HI@GUZANOV.STUDIO </a>
+                    <a href="mailto:hi@guzanov.studio" class=" link email__value" tabindex="17">HI@GUZANOV.STUDIO </a>
                 </div>
                 <div class="contact-info__item phone-number">
                     <span class="phone-number__label">телефон</span>
-                    <a href="tel:79156205803" class="link phone-number__value ">+7 915 620 58 03</a></div>
+                    <a href="tel:79156205803" class="link phone-number__value " tabindex="18">+7 915 620 58 03</a></div>
                 <span class="contact-info-item address">Мы за живое общение и всегда рады встретить вас в нашем офисе по
-                    адресу <a href="geo:54.63004146212787,39.72330072713633" class="address-text-decorate"> улица
-                        Каширина 1А оф. 11</a> </span>
+                    адресу <a href="geo:54.63004146212787,39.72330072713633" class="address-text-decorate"
+                        tabindex="19"> улица Каширина 1А оф. 11</a> </span>
             </div>
         </div>
         <div class="contact-section__cat-logo">
